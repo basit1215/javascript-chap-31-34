@@ -44,13 +44,24 @@ var currentDate= new Date();
 var ramadanDateMilliSeconds = ramadanDate.getTime();
 var currentDateMilliSeconds = currentDate.getTime();
 var diff =currentDateMilliSeconds-ramadanDateMilliSeconds;
-// var daysPassed= diff / 1000 / 60 /60 / 24;
+var daysPassed= diff / 1000 / 60 /60 / 24;
 var daysPassed=  Math.floor(diff / (1000 * 60 * 60 * 24));
 document.write(daysPassed +" days have passed since 1st Ramadan, 2015");
 
-// var referenceDate= new Date("dec 05, 2015");
-// var referenceDate2 =new Date ("jan 01, 2015");
-// var referenceDateMilliSeconds = referenceDate.getTime();
-// var referenceDateMilliSeconds2 = referenceDate2.getTime();
-// var diff2= referenceDateMilliSeconds-referenceDateMilliSeconds2;
-// document.write("On reference date: " + referenceDate + "<br>" + diff2 + " seconds had passed since begining of 2015" );
+var referenceDate= new Date();
+var beginningOfYear =new Date ("jan 01, 2015");
+var diff2= referenceDate-beginningOfYear;
+var elapsed= Math.floor(diff2 /1000);
+document.write("On reference date: " + referenceDate + "<br>" + elapsed + " seconds had passed since begining of 2015" );
+
+// var date2 = new Date();
+// var currentHours= date2.getHours();
+// var extractHours =date2.setHours(currentHours - 1)/ 1000/60/60;
+// document.write("Current Date: " + date2  + "<br>" +"1 hours ago, it was " + extractHours) 
+
+
+
+
+
+
+
